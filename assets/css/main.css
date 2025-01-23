@@ -1626,3 +1626,48 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.personal-journey {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.journey-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.journey-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.journey-gallery {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.journey-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .journey-content {
+    flex-direction: column;
+  }
+
+  .journey-gallery {
+    grid-template-columns: 1fr;
+  }
+}
