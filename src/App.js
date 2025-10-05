@@ -896,14 +896,14 @@ function App() {
               </a>
             </div>
             <div className="col-lg-2 col-md-4 col-sm-6 mb-3">
-              <a href="https://www.strava.com/athletes/your-profile" target="_blank" rel="noopener noreferrer" className="text-decoration-none contact-link">
+              <a href="https://strava.app.link/HMPSp2IPdXb" target="_blank" rel="noopener noreferrer" className="text-decoration-none contact-link">
                 <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1654952873734%2FaCWW9H1li.png"
                   className="contact-logo" alt="Strava" draggable="false" onDragStart={handleDragStart} />
                 <h5 className="mt-2">Strava</h5>
               </a>
             </div>
             <div className="col-lg-2 col-md-4 col-sm-6 mb-3">
-              <a href="https://beli.app/your-profile" target="_blank" rel="noopener noreferrer" className="text-decoration-none contact-link">
+              <a href="https://beliapp.co/app/stevloc2" target="_blank" rel="noopener noreferrer" className="text-decoration-none contact-link">
                 <img src="https://images.squarespace-cdn.com/content/v1/5d27a2af17e26b0001269fd6/8f86dd75-d05e-41db-a33f-01aa6c7391d4/Beli+Logo_FINAL070423.png"
                   className="contact-logo" alt="Beli" draggable="false" onDragStart={handleDragStart} />
                 <h5 className="mt-2">Beli</h5>
