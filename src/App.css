@@ -89,8 +89,9 @@ html {
 
 .nav-link:hover {
   color: #007bff !important;
-}/* Res
-ume and Projects sections styling */
+}
+
+/* Resume and Projects sections styling */
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   border: none;
@@ -146,8 +147,9 @@ ume and Projects sections styling */
   .card-body {
     padding: 1rem;
   }
-}/* Pr
-ofile image styling */
+}
+
+/* Profile image styling */
 #about .img-fluid {
   max-width: 300px;
   width: 100%;
@@ -159,8 +161,9 @@ ofile image styling */
   #about .img-fluid {
     max-width: 250px;
   }
-}/* Ed
-ucation images */
+}
+
+/* Education images */
 .education-img {
   width: 120px;
   height: 80px;
@@ -229,34 +232,26 @@ ucation images */
   .journey-img {
     height: 150px;
   }
-}/
-* Prevent image dragging */
-img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-  pointer-events: none;
 }
 
-/* Allow pointer events for clickable images (if needed) */
-a img {
-  pointer-events: auto;
-}/
-* Better image drag prevention */
+/* Prevent image dragging */
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}/* Work 
-experience images */
+}
+
+/* Allow pointer events for clickable images */
+a img {
+  pointer-events: auto;
+}
+
+/* Work experience images */
 .work-img {
   width: 120px;
   height: 80px;
@@ -270,60 +265,35 @@ experience images */
   transform: scale(1.05);
 }
 
-/* Responsive adjustments for work images */
-@media (max-width: 768px) {
-  .work-img {
-    width: 100px;
-    height: 60px;
-  }
-}/
-* Work experience card images (same format as project images) */
-.work-card-img {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Responsive adjustments for work card images */
-@media (max-width: 768px) {
-  .work-card-img {
-    height: 150px;
-  }
-}/* E
-ducation card images (same format as project images) */
-.education-card-img {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Responsive adjustments for education card images */
-@media (max-width: 768px) {
-  .education-card-img {
-    height: 150px;
-  }
-}/* Education
- card images (larger than work experience) */
-.education-card-img {
-  height: 250px;
-  object-fit: cover;
-}
-
-/* Work experience card images (smaller than education) */
+/* Work experience card images */
 .work-card-img {
   height: 180px;
   object-fit: cover;
 }
 
-/* Responsive adjustments */
+/* Education card images */
+.education-card-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for work and education images */
 @media (max-width: 768px) {
-  .education-card-img {
-    height: 180px;
+  .work-img {
+    width: 100px;
+    height: 60px;
   }
   
   .work-card-img {
     height: 130px;
   }
-}/
-* Journey location sections */
+  
+  .education-card-img {
+    height: 180px;
+  }
+}
+
+/* Journey location sections */
 .journey-location {
   padding: 2rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -368,8 +338,9 @@ ducation card images (same format as project images) */
   .journey-location .lead {
     font-size: 1rem;
   }
-}/* Hero
- Carousel Styles */
+}
+
+/* Hero Carousel Styles */
 .hero-carousel {
   position: absolute;
   top: 0;
@@ -504,8 +475,9 @@ ducation card images (same format as project images) */
   .hero-caption {
     font-size: 1rem;
   }
-}/*
- Expandable Cards */
+}
+
+/* Expandable Cards */
 .expandable-card {
   transition: all 0.3s ease;
   cursor: pointer;
@@ -606,8 +578,9 @@ ducation card images (same format as project images) */
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
   }
-}/* Conta
-ct Section Logo Styling */
+}
+
+/* Contact Section Logo Styling */
 .contact-logo {
   width: 64px;
   height: 64px;
@@ -661,146 +634,34 @@ ct Section Logo Styling */
   .contact-link p {
     font-size: 0.8rem;
   }
-}/
-* Multilingual Greeting Styles */
+}
+
+/* Multilingual Greeting Styles */
 .greeting-container {
-  margin-bottom: 1.5rem;
-  min-height: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.greeting-text {
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-bottom: 0.25rem;
-  animation: fadeInOut 3s ease-in-out infinite;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.greeting-language {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  font-style: italic;
-}
-
-/* Chinese Name Styling */
-.chinese-name {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0.5rem 0 1rem 0;
-  color: #f8f9fa;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
-}
-
-/* Greeting Animation */
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(10px); }
-  20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
-}
-
-/* Hero content adjustments */
-.hero-content h1 {
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive adjustments for multilingual content */
-@media (max-width: 768px) {
-  .greeting-text {
-    font-size: 1.4rem;
-  }
-  
-  .chinese-name {
-    font-size: 2rem;
-  }
-  
-  .greeting-container {
-    min-height: 50px;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-}/* Simplif
-ied Multilingual Greeting Styles */
-.greeting-container {
-  margin-bottom: 1.5rem;
-  min-height: 50px;
+  margin-bottom: 2rem;
+  min-height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.greeting-text {
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-bottom: 0;
-  animation: fadeInOut 3s ease-in-out infinite;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Chinese Name Styling */
-.chinese-name {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 0.5rem 0 1rem 0;
-  color: #f8f9fa;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
-}
-
-/* Greeting Animation */
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(10px); }
-  20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
-}
-
-/* Hero content adjustments */
-.hero-content h1 {
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive adjustments for multilingual content */
-@media (max-width: 768px) {
-  .greeting-text {
-    font-size: 1.4rem;
-  }
-  
-  .chinese-name {
-    font-size: 2rem;
-  }
-  
-  .greeting-container {
-    min-height: 40px;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-}/* Promin
-ent Multilingual Greeting Styles */
 .greeting-text-large {
   font-size: 3.5rem;
   font-weight: 400;
   margin-bottom: 0;
-  animation: fadeInOut 3s ease-in-out infinite;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Update greeting container for larger text */
-.greeting-container {
-  margin-bottom: 2rem !important;
-  min-height: 120px !important;
+/* Smooth transition only when text changes */
+.greeting-transition {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Transition effect when greeting changes */
+.greeting-transition.changing {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 /* Responsive adjustments for large greeting text */
@@ -810,8 +671,8 @@ ent Multilingual Greeting Styles */
   }
   
   .greeting-container {
-    min-height: 80px !important;
-    margin-bottom: 1.5rem !important;
+    min-height: 80px;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -821,29 +682,6 @@ ent Multilingual Greeting Styles */
   }
   
   .greeting-container {
-    min-height: 60px !important;
+    min-height: 60px;
   }
-}/
-* Updated greeting styles - no continuous animation */
-.greeting-text-large {
-  font-size: 3.5rem !important;
-  font-weight: 400 !important;
-  margin-bottom: 0 !important;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
-  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-}
-
-/* Smooth transition only when text changes */
-.greeting-transition {
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-/* Remove the continuous fadeInOut animation */
-@keyframes fadeInOut {
-  /* Animation disabled */
-}/* Trans
-ition effect when greeting changes */
-.greeting-transition.changing {
-  opacity: 0;
-  transform: translateY(-10px);
 }
