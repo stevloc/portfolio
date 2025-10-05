@@ -1,38 +1,849 @@
-.App {
-  text-align: center;
+/* Custom styles for the portfolio */
+body {
+  padding-top: 76px; /* Account for fixed navbar */
 }
 
-.App-logo {
-  height: 40vmin;
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content .lead {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Section spacing */
+section {
+  scroll-margin-top: 76px; /* Account for fixed navbar */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Contact icons hover effect */
+.text-decoration-none:hover i {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content .lead {
+    font-size: 1.2rem;
+  }
+  
+  body {
+    padding-top: 56px;
+  }
+  
+  section {
+    scroll-margin-top: 56px;
+  }
+}
+
+/* Custom navbar styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}/* Res
+ume and Projects sections styling */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-title a {
+  color: inherit;
+}
+
+.card-title a:hover {
+  color: #007bff;
+}
+
+/* Equal height cards */
+.h-100 {
+  height: 100%;
+}
+
+/* Journey section styling */
+#journey {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#journey .lead {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Button styling */
+.btn-outline-primary:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Link styling in cards */
+.bi-box-arrow-up-right {
+  font-size: 0.8rem;
+  margin-left: 0.25rem;
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}/* Pr
+ofile image styling */
+#about .img-fluid {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* For even smaller on mobile */
+@media (max-width: 768px) {
+  #about .img-fluid {
+    max-width: 250px;
+  }
+}/* Ed
+ucation images */
+.education-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Project card images */
+.project-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Sub-project images */
+.project-sub-img {
+  width: 100%;
+  max-width: 250px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Journey gallery */
+.journey-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.journey-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.journey-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 768px) {
+  .education-img {
+    width: 100px;
+    height: 60px;
+  }
+  
+  .project-img {
+    height: 150px;
+  }
+  
+  .project-sub-img {
+    max-width: 200px;
+    height: 100px;
+  }
+  
+  .journey-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .journey-img {
+    height: 150px;
+  }
+}/
+* Prevent image dragging */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Allow pointer events for clickable images (if needed) */
+a img {
+  pointer-events: auto;
+}/
+* Better image drag prevention */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}/* Work 
+experience images */
+.work-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.work-img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for work images */
+@media (max-width: 768px) {
+  .work-img {
+    width: 100px;
+    height: 60px;
+  }
+}/
+* Work experience card images (same format as project images) */
+.work-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for work card images */
+@media (max-width: 768px) {
+  .work-card-img {
+    height: 150px;
+  }
+}/* E
+ducation card images (same format as project images) */
+.education-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for education card images */
+@media (max-width: 768px) {
+  .education-card-img {
+    height: 150px;
+  }
+}/* Education
+ card images (larger than work experience) */
+.education-card-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Work experience card images (smaller than education) */
+.work-card-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .education-card-img {
+    height: 180px;
+  }
+  
+  .work-card-img {
+    height: 130px;
+  }
+}/
+* Journey location sections */
+.journey-location {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.journey-location:last-child {
+  border-bottom: none;
+}
+
+.journey-location h3 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.journey-location .lead {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.journey-location p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Journey gallery spacing */
+.journey-gallery {
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments for journey sections */
+@media (max-width: 768px) {
+  .journey-location {
+    padding: 1.5rem 0;
+  }
+  
+  .journey-location h3 {
+    font-size: 1.5rem;
+  }
+  
+  .journey-location .lead {
+    font-size: 1rem;
+  }
+}/* Hero
+ Carousel Styles */
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.hero-bg.active {
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 20vh;
+}
+
+.hero-caption {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 4;
+  font-size: 1.2rem;
+}
+
+.carousel-control:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+  left: 30px;
+}
+
+.carousel-control.next {
+  right: 30px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 4;
+  margin: 0 auto;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: white;
+  border-color: white;
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 768px) {
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel-control.prev {
+    left: 15px;
+  }
+  
+  .carousel-control.next {
+    right: 15px;
+  }
+  
+  .carousel-indicators {
+    bottom: 20px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .hero-caption {
+    font-size: 1rem;
+  }
+}/*
+ Expandable Cards */
+.expandable-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.expandable-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.expand-btn {
+  color: #007bff;
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  transition: transform 0.3s ease;
+}
+
+.expand-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Image expansion */
+.work-card-img.expanded-img,
+.project-img.expanded-img {
+  height: 300px;
+  transition: height 0.3s ease;
+}
+
+/* Summary and expanded views */
+.summary-view {
+  margin-top: 1rem;
+}
+
+.expanded-view {
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skills styling */
+.key-skills, .all-skills {
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.skill-tag.expanded {
+  background: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Full description styling */
+.full-description h6,
+.all-skills h6 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.full-description ul {
+  margin-bottom: 1rem;
+}
+
+.full-description li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .work-card-img.expanded-img,
+  .project-img.expanded-img {
+    height: 200px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
   }
+}/* Conta
+ct Section Logo Styling */
+.contact-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 8px;
+}
+
+.contact-link:hover .contact-logo {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.contact-link {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link h5 {
+  color: #333;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.contact-link:hover h5 {
+  color: #007bff;
+}
+
+.contact-link p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for contact logos */
+@media (max-width: 768px) {
+  .contact-logo {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .contact-link h5 {
+    font-size: 1rem;
+  }
+  
+  .contact-link p {
+    font-size: 0.8rem;
+  }
+}/
+* Multilingual Greeting Styles */
+.greeting-container {
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+  animation: fadeInOut 3s ease-in-out infinite;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.greeting-language {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Chinese Name Styling */
+.chinese-name {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0 1rem 0;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+/* Greeting Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Hero content adjustments */
+.hero-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for multilingual content */
+@media (max-width: 768px) {
+  .greeting-text {
+    font-size: 1.4rem;
+  }
+  
+  .chinese-name {
+    font-size: 2rem;
+  }
+  
+  .greeting-container {
+    min-height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}/* Simplif
+ied Multilingual Greeting Styles */
+.greeting-container {
+  margin-bottom: 1.5rem;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Chinese Name Styling */
+.chinese-name {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0 1rem 0;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+/* Greeting Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Hero content adjustments */
+.hero-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for multilingual content */
+@media (max-width: 768px) {
+  .greeting-text {
+    font-size: 1.4rem;
+  }
+  
+  .chinese-name {
+    font-size: 2rem;
+  }
+  
+  .greeting-container {
+    min-height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}/* Promin
+ent Multilingual Greeting Styles */
+.greeting-text-large {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Update greeting container for larger text */
+.greeting-container {
+  margin-bottom: 2rem !important;
+  min-height: 120px !important;
+}
+
+/* Responsive adjustments for large greeting text */
+@media (max-width: 768px) {
+  .greeting-text-large {
+    font-size: 2.5rem;
+  }
+  
+  .greeting-container {
+    min-height: 80px !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-text-large {
+    font-size: 2rem;
+  }
+  
+  .greeting-container {
+    min-height: 60px !important;
+  }
+}/
+* Updated greeting styles - no continuous animation */
+.greeting-text-large {
+  font-size: 3.5rem !important;
+  font-weight: 400 !important;
+  margin-bottom: 0 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Smooth transition only when text changes */
+.greeting-transition {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Remove the continuous fadeInOut animation */
+@keyframes fadeInOut {
+  /* Animation disabled */
+}/* Trans
+ition effect when greeting changes */
+.greeting-transition.changing {
+  opacity: 0;
+  transform: translateY(-10px);
 }
