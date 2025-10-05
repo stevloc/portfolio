@@ -1,6 +1,18 @@
 /* Custom styles for the portfolio */
 body {
-  padding-top: 76px; /* Account for fixed navbar */
+  margin: 0;
+  padding: 0;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: optimizeQuality;
 }
 
 .hero-section {
@@ -46,15 +58,17 @@ section {
   scroll-margin-top: 76px; /* Account for fixed navbar */
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling - only for users who don't prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Contact icons hover effect */
 .text-decoration-none:hover i {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 /* Responsive adjustments */
@@ -68,7 +82,8 @@ html {
   }
   
   body {
-    padding-top: 56px;
+    margin: 0;
+    padding: 0;
   }
   
   section {
@@ -93,13 +108,13 @@ html {
 
 /* Resume and Projects sections styling */
 .card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   border: none;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  will-change: box-shadow;
 }
 
 .card:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
@@ -128,8 +143,8 @@ html {
 
 /* Button styling */
 .btn-outline-primary:hover {
-  transform: translateY(-1px);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
 }
 
 /* Link styling in cards */
@@ -200,13 +215,13 @@ html {
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  will-change: box-shadow;
 }
 
 .journey-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* Responsive adjustments for images */
@@ -258,11 +273,11 @@ a img {
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #dee2e6;
-  transition: transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .work-img:hover {
-  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 /* Work experience card images */
@@ -479,13 +494,13 @@ a img {
 
 /* Expandable Cards */
 .expandable-card {
-  transition: all 0.3s ease;
+  transition: box-shadow 0.2s ease;
   cursor: pointer;
+  will-change: box-shadow;
 }
 
 .expandable-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
 .expand-btn {
@@ -493,11 +508,11 @@ a img {
   font-size: 1.2rem;
   border: none;
   background: none;
-  transition: transform 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .expand-btn:hover {
-  transform: scale(1.1);
+  color: #0056b3;
 }
 
 /* Image expansion */
@@ -585,13 +600,12 @@ a img {
   width: 64px;
   height: 64px;
   object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: opacity 0.2s ease;
   border-radius: 8px;
 }
 
 .contact-link:hover .contact-logo {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+  opacity: 0.8;
 }
 
 .contact-link {

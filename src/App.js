@@ -69,7 +69,7 @@ function App() {
       company: "Amazon Inc. (Whole Foods) - World-Wide Grocery Tech",
       period: "May 2025 - Aug. 2025",
       location: "Austin, TX",
-      image: "assets/img/wholefoods.jpg",
+      image: "assets/img/wholefoods.JPG",
       summary: "Improved an existing tool using AI-driven forecasting and analytics",
       keySkills: ["Python", "SQL", "AWS", "Machine Learning", "Data Analytics"],
       fullDescription: [
@@ -101,7 +101,7 @@ function App() {
       company: "NYU Athletics",
       period: "Oct. 2023 - Aug. 2024",
       location: "New York, NY",
-      image: "assets/img/nyu_404.JPG",
+      image: "assets/img/nyu_404.jpg",
       summary: "Managed athletic facility operations and earned Emerging Leader Award",
       keySkills: ["Operations Management", "Leadership", "Event Coordination", "Team Collaboration"],
       fullDescription: [
@@ -117,7 +117,7 @@ function App() {
       company: "NYU Office of Residential Life and Housing Services",
       period: "May 2024 - Aug. 2024",
       location: "New York, NY",
-      image: "assets/img/nyu_gram.JPG",
+      image: "assets/img/nyu_gram.jpg",
       summary: "Supported 700+ summer residents through data management and administrative tasks",
       keySkills: ["Data Management", "Administrative Support", "Resident Services", "Excel/Database"],
       fullDescription: [
@@ -136,7 +136,7 @@ function App() {
       title: "Hustle Hub Job Board",
       period: "Jan. 2025 - Present",
       location: "Brooklyn, NY",
-      image: "assets/img/portfolio/jobboard.jpg",
+      image: "assets/img/portfolio/jobboard.JPG",
       summary: "Multi-language job board expanding access for underserved communities",
       keySkills: ["Angular", "Django", "PostgreSQL", "Multi-language Support"],
       fullDescription: [
@@ -168,7 +168,7 @@ function App() {
       title: "Computer Simulation Projects",
       period: "Jan. 2025 - May 2025",
       location: "New York, NY",
-      image: "assets/img/portfolio/simulation.jpg",
+      image: "assets/img/portfolio/simulation.JPG",
       summary: "MATLAB simulations analyzing urban systems, ecological dynamics, and natural phenomena",
       keySkills: ["MATLAB", "Simulation Modeling", "Data Analysis", "Visualization"],
       link: "https://github.com/stevloc/matlab/tree/main",
@@ -184,7 +184,7 @@ function App() {
       title: "Brass Bets Casino Board Game",
       period: "Sep. 2024 - Dec. 2024",
       location: "Shanghai, CN",
-      image: "assets/img/portfolio/brassbets.jpg",
+      image: "assets/img/portfolio/brassbets.JPG",
       summary: "Engaging casino-themed board game developed during study abroad",
       keySkills: ["Game Design", "Strategy", "Cultural Integration", "Creative Development"],
       link: "https://drive.google.com/file/d/1pk06BFISqoWgiJO6HdbS6oZ7biWPlDDg/view?usp=sharing",
@@ -370,6 +370,7 @@ function App() {
             <a className="nav-link" href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
             <a className="nav-link" href="#resume" onClick={(e) => { e.preventDefault(); scrollToSection('resume'); }}>Resume</a>
             <a className="nav-link" href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>Projects</a>
+            <a className="nav-link" href="#journey" onClick={(e) => { e.preventDefault(); scrollToSection('journey'); }}>Journey</a>
             <a className="nav-link" href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
           </div>
         </div>
@@ -509,7 +510,7 @@ function App() {
               <h3 className="mb-4">Education</h3>
 
               <div className="card mb-4">
-                <img src="assets/img/nyu_tandon.JPG"
+                <img src="assets/img/nyu_tandon.jpg"
                   className="card-img-top education-card-img" alt="NYU Campus" draggable="false" onDragStart={handleDragStart} />
                 <div className="card-body">
                   <h5 className="card-title">
@@ -528,7 +529,7 @@ function App() {
               </div>
 
               <div className="card">
-                <img src="assets/img/nyu_shanghai.JPG"
+                <img src="assets/img/nyu_shanghai.jpg"
                   className="card-img-top education-card-img" alt="NYU Shanghai Campus" draggable="false" onDragStart={handleDragStart} />
                 <div className="card-body">
                   <h5 className="card-title">
@@ -849,7 +850,7 @@ function App() {
                     className="journey-img" alt="China 3" draggable="false" onDragStart={handleDragStart} />
                   <img src="assets/img/personal_journey/china4.JPG"
                     className="journey-img" alt="China 4" draggable="false" onDragStart={handleDragStart} />
-                  <img src="assets/img/personal_journey/china5.JPG"
+                  <img src="assets/img/personal_journey/china5.jpg"
                     className="journey-img" alt="China 5" draggable="false" onDragStart={handleDragStart} />
                 </div>
               </div>
